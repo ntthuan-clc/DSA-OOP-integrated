@@ -43,7 +43,7 @@ void HashTableChaining::removeVal(int val) {
     {
         pPrev = pNode;
         pNode = pNode->pNext;
-        
+        //check if pNode = nullptr
         if(!pNode) {
             return;
         } 

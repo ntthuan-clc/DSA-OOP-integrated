@@ -14,4 +14,6 @@ HashTableOpenAddressing::~HashTableOpenAddressing() {
     this->HT = nullptr;
 }
 
+QuadraticProbing::QuadraticProbing(int _capacity) : HashTableOpenAddressing(_capacity) {}
+
 

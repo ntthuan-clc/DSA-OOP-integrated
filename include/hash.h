@@ -18,6 +18,8 @@ public:
     virtual bool findVal(int) = 0;
     virtual void removeVal(int) = 0;
 
+    
+
 };
 
 class HashTableChaining : public HashTable {
@@ -64,6 +66,9 @@ public:
     
     virtual int probing(int) = 0;
 
+    void addVal(int);
+    void showTable();
+
 };
 
 class LinearProbing : public HashTableOpenAddressing {
@@ -71,19 +76,15 @@ public:
     LinearProbing(int);
 
     int probing(int);
-    void addVal(int);
-    void showTable();
     bool findVal(int);
     void removeVal(int);
 };
 
-class QuandraticProbing : public HashTableOpenAddressing {
-    public:
-    QuandraticProbing(int);
+class QuadraticProbing : public HashTableOpenAddressing {
+public:
+    QuadraticProbing(int);
 
     int probing(int);
-    void addVal(int);
-    void showTable();
     bool findVal(int);
     void removeVal(int);
 };

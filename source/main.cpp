@@ -40,7 +40,8 @@ void testSearch() {
 
 void testHash() {
     //HashTable *hashtable = new HashTableChaining(10);
-    HashTable *hashtable = new LinearProbing(10);
+    //HashTable *hashtable = new LinearProbing(10);
+    HashTable *hashtable = new QuadraticProbing(10);
 
     hashtable->addVal(5);
     hashtable->addVal(15);

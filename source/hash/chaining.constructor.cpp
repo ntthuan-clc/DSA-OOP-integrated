@@ -14,3 +14,4 @@ HashTableChaining::~HashTableChaining() {
     }
     delete HT;
 }
+
