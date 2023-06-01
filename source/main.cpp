@@ -39,16 +39,19 @@ void testSearch() {
 }
 
 void testHash() {
-    HashTableChaining ht(10);
-    ht.addVal(5);
-    ht.addVal(15);
-    ht.addVal(3);
-    ht.addVal(7);
+    HashTable *hashtable = new HashTableChaining(10);
 
-    ht.showTable();
-    std::cout << ht.findVal(7);    
-    std::cout << ht.findVal(8);    
-    std::cout << ht.findVal(5);    
+    hashtable->addVal(5);
+    hashtable->addVal(15);
+    hashtable->addVal(3);
+    hashtable->addVal(7);
+    hashtable->addVal(25);
+    hashtable->removeVal(5);
+    hashtable->removeVal(25);
+    hashtable->showTable();
+    std::cout << hashtable->findVal(7);    
+    std::cout << hashtable->findVal(8);    
+    std::cout << hashtable->findVal(5);    
     
 
     

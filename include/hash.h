@@ -5,9 +5,19 @@ class HashTable {
 protected: // outside class cannot access, inherited class and this class can access
     int capacity; // num of slot 
     int hash(int);
+
+    
+
 public: 
     //HashTable(); // must add this constructor if have another custom constructor
     HashTable(int capacity);
+
+    //pure function
+    virtual void addVal(int) = 0;
+    virtual void showTable() = 0;
+    virtual bool findVal(int) = 0;
+    virtual void removeVal(int) = 0;
+
 };
 
 class HashTableChaining : public HashTable {
@@ -40,6 +50,8 @@ public:
     void addVal(int);
     void showTable();
     bool findVal(int);
+    void removeVal(int);
+    
 };
 
 class HashTableOpenAddressing : public HashTable {

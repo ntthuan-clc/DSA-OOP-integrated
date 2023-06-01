@@ -1,4 +1,4 @@
-#include "../../include/hash.h"
+#include "../../include/stdafx.h"
 HashTable::HashTable(int capacity) {
     this->capacity = capacity;
 }
