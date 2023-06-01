@@ -55,5 +55,40 @@ public:
 };
 
 class HashTableOpenAddressing : public HashTable {
+protected: 
+    int *HT;
 
+public:
+    HashTableOpenAddressing(int);
+    ~HashTableOpenAddressing();
+    
+    virtual int probing(int) = 0;
+
+};
+
+class LinearProbing : public HashTableOpenAddressing {
+public:
+    LinearProbing(int);
+
+    int probing(int);
+    void addVal(int);
+    void showTable();
+    bool findVal(int);
+    void removeVal(int);
+};
+
+class QuandraticProbing : public HashTableOpenAddressing {
+    public:
+    QuandraticProbing(int);
+
+    int probing(int);
+    void addVal(int);
+    void showTable();
+    bool findVal(int);
+    void removeVal(int);
+};
+
+
+class DoubleHashing : public HashTableOpenAddressing {
+    
 };

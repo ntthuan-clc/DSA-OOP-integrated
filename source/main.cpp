@@ -39,19 +39,20 @@ void testSearch() {
 }
 
 void testHash() {
-    HashTable *hashtable = new HashTableChaining(10);
+    //HashTable *hashtable = new HashTableChaining(10);
+    HashTable *hashtable = new LinearProbing(10);
 
     hashtable->addVal(5);
     hashtable->addVal(15);
     hashtable->addVal(3);
     hashtable->addVal(7);
     hashtable->addVal(25);
-    hashtable->removeVal(5);
-    hashtable->removeVal(25);
+    // hashtable->removeVal(5);
+    // hashtable->removeVal(25);
     hashtable->showTable();
     std::cout << hashtable->findVal(7);    
     std::cout << hashtable->findVal(8);    
-    std::cout << hashtable->findVal(5);    
+    std::cout << hashtable->findVal(25);    
     
 
     
