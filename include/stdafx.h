@@ -8,6 +8,7 @@
 #include "search.h"
 #include "errordefine.h"
 #include "hash.h"
+#include "binary_tree.h"
 
 // Define value
 #define CAPACITY  100
