@@ -1,12 +1,12 @@
 #pragma once
 #include"binarytreenode.h"
 
-class BinaryTree {
+class BST {
 private:
     Node* root;
 public: 
-    BinaryTree();
-    ~BinaryTree();
+    BST();
+    ~BST();
 
     void insert(int);
     void remove(int);

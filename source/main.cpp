@@ -58,7 +58,7 @@ void testHash() {
 }
 
 void testTree() {
-    BinaryTree bst;
+    BST bst;
     bst.insert(6);
     bst.insert(2);
     bst.insert(7);

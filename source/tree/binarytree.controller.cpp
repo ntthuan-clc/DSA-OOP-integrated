@@ -1,10 +1,10 @@
 #include "../../include/stdafx.h"
 
-Node *BinaryTree::getRoot() {
+Node *BST::getRoot() {
     return this->root;
 } // use for inoder, preoder, isEmpty, find
 
-void BinaryTree::insert(int data){
+void BST::insert(int data){
     Node* pNode = new Node(data);
     if(this->root == nullptr) {
         this->root = pNode;
@@ -35,11 +35,11 @@ void BinaryTree::insert(int data){
 
 }
 
-void BinaryTree::remove(int data) {
+void BST::remove(int data) {
     return;
 }
 
-bool BinaryTree::isEmpty() {
+bool BST::isEmpty() {
     if(this->root == nullptr) {
         return true;
     }
@@ -47,11 +47,11 @@ bool BinaryTree::isEmpty() {
     return false;
 }
 
-int  BinaryTree::find(int data) {
+int  BST::find(int data) {
     return 0;
 }
 
-void BinaryTree::inoder(Node* _root) {
+void BST::inoder(Node* _root) {
     // Left Node Right
     if(_root == nullptr) {
         return;
@@ -62,11 +62,11 @@ void BinaryTree::inoder(Node* _root) {
 
 }
 
-void BinaryTree::preoder(Node* _root) {
+void BST::preoder(Node* _root) {
     return;
 }
 
-void BinaryTree::postorder(Node* _root) {
+void BST::postorder(Node* _root) {
     return;
 }
 

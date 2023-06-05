@@ -1,10 +1,10 @@
 #include "../../include/stdafx.h"
 
-BinaryTree::BinaryTree() {
+BST::BST() {
     this->root = nullptr;
 }
 
-BinaryTree::~BinaryTree() {
+BST::~BST() {
     // delete this->root;
     // this->root = nullptr;
 }

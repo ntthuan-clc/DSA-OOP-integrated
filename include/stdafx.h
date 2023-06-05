@@ -8,7 +8,7 @@
 #include "search.h"
 #include "errordefine.h"
 #include "hash.h"
-#include "binarytree.h"
+#include "bst.h"
 #include "binarytreenode.h"
 
 // Define value
