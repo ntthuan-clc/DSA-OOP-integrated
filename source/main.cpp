@@ -67,5 +67,12 @@ void testTree() {
     bst.insert(5);
     bst.insert(10);
 
+    //bst.inoder(bst.getRoot());
+
+    bst.remove(7);    
+    bst.remove(3);    
+
     bst.inoder(bst.getRoot());
+
+
 }

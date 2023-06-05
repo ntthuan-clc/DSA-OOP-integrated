@@ -4,6 +4,8 @@
 class BST {
 private:
     Node* root;
+    void supportRemove2Children(Node*);
+    void supportRemoveNoChild(Node*, int);
 public: 
     BST();
     ~BST();
@@ -12,7 +14,7 @@ public:
     void remove(int);
 
     bool isEmpty();
-    int find(int);
+    bool find(int);
 
     void inoder(Node*);
     void preoder(Node*);
