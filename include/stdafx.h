@@ -4,14 +4,12 @@
 #include <iostream>
 
 // External library
-#include "sorting.h"
-#include "search.h"
+#include "binarytreenode.h"
+#include "bst.h"
 #include "errordefine.h"
 #include "hash.h"
-#include "bst.h"
-#include "binarytreenode.h"
+#include "search.h"
+#include "sorting.h"
 
 // Define value
-#define CAPACITY  100
-
-
+#define CAPACITY 100

@@ -48,6 +48,8 @@ void BST::insert(int data) {
     Node* pNode = new Node(data);
     if (this->root == nullptr) {
         this->root = pNode;
+        this->root->parent = nullptr;
+        this->root->depth = 0;
         return;
     }
 
@@ -59,6 +61,8 @@ void BST::insert(int data) {
                 head = head->left;
             } else {
                 head->left = pNode;
+                pNode->parent = head;
+                pNode->depth = pNode->parent->depth + 1;
                 return;
             }
         } else {
@@ -66,6 +70,8 @@ void BST::insert(int data) {
                 head = head->right;
             } else {
                 head->right = pNode;
+                pNode->parent = head;
+                pNode->depth = pNode->parent->depth + 1;
                 return;
             }
         }
@@ -231,6 +237,52 @@ void BST::inoder(Node* _root) {
     this->inoder(_root->right);
 }
 
-void BST::preoder(Node* _root) { return; }
+void BST::preoder(Node* _root) {
+    // Node Left Right
+    if (_root == nullptr) {
+        return;
+    }
 
-void BST::postorder(Node* _root) { return; }
+    std::cout << _root->data << " ";
+
+    this->inoder(_root->left);
+    this->inoder(_root->right);
+}
+
+void BST::postorder(Node* _root) {
+    // Left Right Node
+    if (_root == nullptr) {
+        return;
+    }
+
+    this->inoder(_root->left);
+    this->inoder(_root->right);
+
+    std::cout << _root->data << " ";
+}
+
+// Find Node
+Node* BST::findNode(int data) {
+    if (this->root == nullptr) {
+        return NULL;
+    }
+
+    if (this->root->data == data) {
+        return this->root;
+    }
+
+    Node* tRoot = this->getRoot();
+    while (tRoot) {
+        if (tRoot->data == data) {
+            return tRoot;
+        }
+
+        if (tRoot->data < data) {
+            tRoot = tRoot->right;
+        } else {
+            tRoot = tRoot->left;
+        }
+    }
+
+    return NULL;
+}

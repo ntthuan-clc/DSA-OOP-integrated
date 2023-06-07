@@ -7,7 +7,6 @@ void testTree();
 
 int main() {
     testTree();
-
     return 0;
 }
 
@@ -22,27 +21,25 @@ void testSort() {
     sa.printArray();
 }
 
-
 void testSearch() {
     int arr[] = {1, 2, 3, 5, 6, 12, 12, 17};
     int n = sizeof(arr) / sizeof(int);
 
     BinarySearch bs(arr, n);
 
-    std::pair<int, MyErr*> result = bs.binarySearchRecursion(1,6,3);
+    std::pair<int, MyErr *> result = bs.binarySearchRecursion(1, 6, 3);
 
     if (result.second->err != nullptr) {
         std::cout << result.second->Error() << "\n";
-    }
-    else {
+    } else {
         std::cout << result.first << "\n";
     }
 }
 
 void testHash() {
-    //HashTable *hashtable = new HashTableChaining(10);
-    //HashTable *hashtable = new LinearProbing(10);
-    //HashTable *hashtable = new QuadraticProbing(10);
+    // HashTable *hashtable = new HashTableChaining(10);
+    // HashTable *hashtable = new LinearProbing(10);
+    // HashTable *hashtable = new QuadraticProbing(10);
     HashTable *hashtable = new DoubleHashing(10);
     hashtable->addVal(5);
     hashtable->addVal(15);
@@ -52,9 +49,9 @@ void testHash() {
     // hashtable->removeVal(5);
     // hashtable->removeVal(25);
     hashtable->showTable();
-    std::cout << hashtable->findVal(7);    
-    std::cout << hashtable->findVal(8);    
-    std::cout << hashtable->findVal(25);    
+    std::cout << hashtable->findVal(7);
+    std::cout << hashtable->findVal(8);
+    std::cout << hashtable->findVal(25);
 }
 
 void testTree() {
@@ -67,12 +64,33 @@ void testTree() {
     bst.insert(5);
     bst.insert(10);
 
-    //bst.inoder(bst.getRoot());
+    // bst.inoder(bst.getRoot());
 
-    bst.remove(7);    
-    bst.remove(3);    
+    // bst.remove(7);
+    // bst.remove(3);
 
-    bst.inoder(bst.getRoot());
+    // bst.preoder(bst.getRoot());
+    // std::cout << "\n";
+    // bst.postorder(bst.getRoot());
 
+    // std::pair<int, MyErr *> result = bst.findMinRecursive(bst.getRoot());
+    // if (result.second->err == nullptr) {
+    //     std::cout << "Min value: " << result.first << "\n";
+    // }
+    // result = bst.findMaxRecursive(bst.getRoot());
+    // if (result.second->err == nullptr) {
+    //     std::cout << "Max value: " << result.first;
+    //}
 
+    // Node *lca = bst.lca(1, 2);
+    // if (lca) {
+    //     std::cout << lca->data;
+    // }
+
+    // bst.inoder(bst.getRoot());
+
+    // std::cout << bst.checkIsBST(bst.getRoot());
+    // std::cout << bst.sumBST(bst.getRoot());
+
+    std::cout << bst.count(bst.getRoot());
 }
